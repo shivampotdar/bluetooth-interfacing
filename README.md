@@ -20,3 +20,25 @@ Fork this repository and get started. You are supposed to interface the sensor w
 
 ## Winner
 First PR that follows the given rules and completes the given task, is declared the winner at e-Yantra's discretion
+
+Author Notes :
+
+ BluetoothInterfacing.c
+
+ Author: Shivam Mahesh Potdar (github/shivampotdar) (shivampotdar99@gmail.com)
+ This code forms an interface for HC05 bluetooth module with Firebird
+
+ HC05 module is connected to UART3 interface of the ATMEGA2560 on Firebird
+ It continuously monitors the HC05 module for serial input from bluetooth device such
+ as a phone and prints the same on LCD screen on Firebird.
+ For this setup Serial Bluetooth Terminal (from Play Store, publisher Kai Morich) was used.
+ The settings done in the app are : Character delay: 5ms, Newline: None
+ The program continuosly takes input from the app and prints on LCD, there is no clear condition,
+ the input just rolls over to next line on crossing first row and then restarts for 1,1 if entire LCD is filled
+ 
+		Connections
+ HC-05 <---------> Firebird Expansion Header
+  Vcc           			Pin21/22 (5V)
+  GND				Pin23/24 (Ground)
+  RX				Pin46 (TXD3) 				
+  TX				Pin45 (RXD3)
